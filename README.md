@@ -16,25 +16,25 @@ composer require friendsofphp/number
 use FriendsOfPhp\Number\Number;
 
 // Format a number
-$formattedNumber = Number::format(1234567.89);
+echo Number::format(1234567.89); // 1,234,567.89
 
 // Spell out a number
-$spelledNumber = Number::spell(1234);
+echo Number::format(1234567.89); // one thousand two hundred thirty-four
 
 // Get the ordinal form of a number
-$ordinalNumber = Number::ordinal(42);
+echo Number::format(1234567.89); // 42nd
 
 // Format a number as a percentage
-$percentage = Number::percentage(0.75);
+echo Number::format(1234567.89); // 1%
 
 // Format a number as currency
-$currency = Number::currency(1234.56, 'EUR');
+echo Number::format(1234567.89); // €1,234.56
 
 // Format file size
-$fileSize = Number::fileSize(1024);
+echo Number::format(1234567.89); // 1 KB
 
 // Get a human-readable representation of a number
-$humanReadable = Number::forHumans(1234567.89);
+echo Number::format(1234567.89); // 1 million
 ```
 
 ### Advanced usage
