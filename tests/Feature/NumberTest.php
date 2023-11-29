@@ -61,6 +61,7 @@ it('converts numbers to ordinals', function () {
     $this->assertSame('1st', Number::ordinal(1));
     $this->assertSame('2nd', Number::ordinal(2));
     $this->assertSame('3rd', Number::ordinal(3));
+    $this->assertSame('4th', Number::ordinal(4));
 });
 
 it('converts numbers to percentages', function () {
