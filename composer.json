@@ -1,6 +1,6 @@
 {
     "name": "friendsofphp/number",
-    "description": "Adds a Number utility class",
+    "description": "Number utility for displaying human-friendly numeric data",
     "license": "MIT",
     "autoload": {
         "psr-4": {
