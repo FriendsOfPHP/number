@@ -13,7 +13,7 @@ composer require friendsofphp/number
 ### Basic usage
 
 ```php
-use FOP\Number\Number;
+use FriendsOfPhp\Number\Number;
 
 // Format a number
 $formattedNumber = Number::format(1234567.89);
@@ -40,7 +40,7 @@ $humanReadable = Number::forHumans(1234567.89);
 ### Advanced usage
 
 ```php
-use FOP\Number\Number;
+use FriendsOfPhp\Number\Number;
 
 // Set a custom locale
 Number::useLocale('fr');

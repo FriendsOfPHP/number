@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "FOP\\Number\\": "src/"
+            "FriendsOfPhp\\Number\\": "src/"
         }
     },
     "authors": [

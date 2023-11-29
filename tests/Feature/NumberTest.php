@@ -1,6 +1,6 @@
 <?php
 
-use FOP\Number\Number;
+use FriendsOfPhp\Number\Number;
 
 test('format', function () {
     $this->assertSame('0', Number::format(0));

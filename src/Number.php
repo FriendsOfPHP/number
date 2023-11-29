@@ -1,6 +1,6 @@
 <?php
 
-namespace FOP\Number;
+namespace FriendsOfPhp\Number;
 
 use NumberFormatter;
 
