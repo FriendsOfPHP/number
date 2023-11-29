@@ -1,0 +1,35 @@
+name: PHP Coding Style
+
+on: [push]
+
+permissions:
+  contents: write
+
+jobs:
+  php-cs-fixer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: Run PHP CS Fixer
+        run: vendor/bin/php-cs-fixer fix ./src --diff --verbose
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add ./src
+          git commit -m "Apply style fixes from PHP CS Fixer"
+          git push
