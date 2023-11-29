@@ -2,7 +2,7 @@
 
 use FriendsOfPhp\Number\Number;
 
-test('format', function () {
+it('formats numbers', function () {
     $this->assertSame('0', Number::format(0));
     $this->assertSame('1', Number::format(1));
     $this->assertSame('10', Number::format(10));
@@ -30,7 +30,7 @@ test('format', function () {
     $this->assertSame('NaN', Number::format(NAN));
 });
 
-test('format with different locale', function () {
+it('formats numbers with locale', function () {
     $this->assertSame('123,456,789', Number::format(123456789, locale: 'en'));
     $this->assertSame('123.456.789', Number::format(123456789, locale: 'de'));
     $this->assertSame('123 456 789', Number::format(123456789, locale: 'fr'));
@@ -38,7 +38,7 @@ test('format with different locale', function () {
     $this->assertSame('123 456 789', Number::format(123456789, locale: 'sv'));
 });
 
-test('format with app locale', function () {
+it('formats numbers with configured locale', function () {
     $this->assertSame('123,456,789', Number::format(123456789));
 
     Number::useLocale('de');
@@ -48,22 +48,22 @@ test('format with app locale', function () {
     Number::useLocale('en');
 });
 
-test('spellout', function () {
+it('spells out numbers', function () {
     $this->assertSame('ten', Number::spell(10));
     $this->assertSame('one point two', Number::spell(1.2));
 });
 
-test('spellout with locale', function () {
+it('spells out numbers with locale', function () {
     $this->assertSame('trois', Number::spell(3, 'fr'));
 });
 
-test('ordinal', function () {
+it('converts numbers to ordinals', function () {
     $this->assertSame('1st', Number::ordinal(1));
     $this->assertSame('2nd', Number::ordinal(2));
     $this->assertSame('3rd', Number::ordinal(3));
 });
 
-test('to percent', function () {
+it('converts numbers to percentages', function () {
     $this->assertSame('0%', Number::percentage(0, precision: 0));
     $this->assertSame('0%', Number::percentage(0));
     $this->assertSame('1%', Number::percentage(1));
@@ -84,7 +84,7 @@ test('to percent', function () {
     $this->assertSame('0.1235%', Number::percentage(0.12345, precision: 4));
 });
 
-test('to currency', function () {
+it('formats numbers as currencies', function () {
     $this->assertSame('$0.00', Number::currency(0));
     $this->assertSame('$1.00', Number::currency(1));
     $this->assertSame('$10.00', Number::currency(10));
@@ -98,7 +98,7 @@ test('to currency', function () {
     $this->assertSame('$5.32', Number::currency(5.325));
 });
 
-test('to currency with different locale', function () {
+it('formats numbers as currencies with locale', function () {
     $this->assertSame('1,00 €', Number::currency(1, 'EUR', 'de'));
     $this->assertSame('1,00 $', Number::currency(1, 'USD', 'de'));
     $this->assertSame('1,00 £', Number::currency(1, 'GBP', 'de'));
@@ -108,7 +108,7 @@ test('to currency with different locale', function () {
     $this->assertSame('1 234,56 $US', Number::currency(1234.56, 'USD', 'fr'));
 });
 
-test('bytes to human', function () {
+it('formats numbers as human readable file sizes', function () {
     $this->assertSame('0 B', Number::fileSize(0));
     $this->assertSame('0.00 B', Number::fileSize(0, precision: 2));
     $this->assertSame('1 B', Number::fileSize(1));
@@ -126,7 +126,7 @@ test('bytes to human', function () {
     $this->assertSame('1,024 YB', Number::fileSize(1024 ** 9));
 });
 
-test('to human', function () {
+it('formats numbers as fluent human readable strings', function () {
     $this->assertSame('1', Number::forHumans(1));
     $this->assertSame('1.00', Number::forHumans(1, precision: 2));
     $this->assertSame('10', Number::forHumans(10));
