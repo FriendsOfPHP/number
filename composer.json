@@ -18,7 +18,8 @@
         "ext-intl": "*"
     },
     "require-dev": {
-        "pestphp/pest": "^2.24"
+        "pestphp/pest": "^2.24",
+        "friendsofphp/php-cs-fixer": "^3.40"
     },
     "config": {
         "allow-plugins": {
