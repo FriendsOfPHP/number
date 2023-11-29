@@ -1,0 +1,28 @@
+{
+    "name": "friendsofphp/number",
+    "description": "Adds a Number utility class",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FOP\\Number\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Caen De Silva",
+            "email": "caen@desilva.se"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-intl": "*"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.24"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
