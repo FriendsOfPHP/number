@@ -1,0 +1,12 @@
+hyde:
+    output_directories:
+        documentation-page: ''
+    load_app_styles_from_cdn: true
+    pretty_urls: true
+
+docs:
+    sidebar:
+        header: 'PHP Number Utility'
+        footer: '[GitHub Source Code](https://github.com/FriendsOfPHP/number)'
+    table_of_contents:
+        max_heading_level: 3
