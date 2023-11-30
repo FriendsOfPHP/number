@@ -1,0 +1,29 @@
+{
+    "name": "friendsofphp/number",
+    "description": "Number utility for displaying human-friendly numeric data",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FriendsOfPhp\\Number\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Caen De Silva",
+            "email": "caen@desilva.se"
+        }
+    ],
+    "require": {
+        "php": "^8.1 <8.4",
+        "ext-intl": "*"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.24",
+        "friendsofphp/php-cs-fixer": "^3.40"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

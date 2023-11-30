@@ -50,3 +50,9 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+# Code style
+.php-cs-fixer.cache
+
+# PhpStorm
+/.idea/
