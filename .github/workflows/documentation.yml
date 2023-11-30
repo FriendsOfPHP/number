@@ -1,0 +1,36 @@
+name: Build and Deploy Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-documentation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: https://friendsofphp.github.io/number
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate Documentation
+        run: |
+          mkdir hyde
+          mkdir hyde/_docs
+          cp ./.github/docs/hyde.yml hyde/hyde.yml
+          php ./.github/docs/DocumentationGenerator.php --output hyde/_docs/index.md
+
+      - name: Build and Deploy HydePHP Site
+        uses: hydephp/action@master
+        with:
+          deploy-to: pages
+          env-torchlight-token: ${{ secrets.TORCHLIGHT_TOKEN }}
+          env-site-name: "'PHP Number Utility - by Friends of PHP'"
+          directory: hyde
+          framework-version: dev-develop # Todo: Remove when next version is released
