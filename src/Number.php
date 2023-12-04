@@ -120,7 +120,7 @@ class Number
     }
 
     /**
-     * Convert the number to its human-readable equivalent.
+     * Convert the number to its human-readable equivalent with abbreviated units.
      *
      * @param int|float $number
      * @param int $precision
@@ -133,7 +133,7 @@ class Number
     }
 
     /**
-     * Convert the number to its human readable equivalent.
+     * Convert the number to its human-readable equivalent.
      *
      * @param  int  $number
      * @param  int  $precision
@@ -158,7 +158,7 @@ class Number
     }
 
     /**
-     * Convert the number to its human readable equivalent.
+     * Convert the number to its human-readable equivalent.
      *
      * @param  int  $number
      * @param  int  $precision

@@ -35,6 +35,9 @@ echo Number::format(1234567.89); // 1 KB
 
 // Get a human-readable representation of a number
 echo Number::format(1234567.89); // 1 million
+
+// Get the abbreviated form of a number
+echo Number::format(1234567.89); // 1M
 ```
 
 ### Advanced usage
