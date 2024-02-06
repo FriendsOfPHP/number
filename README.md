@@ -34,7 +34,10 @@ echo Number::currency(1234567.89, 'EUR'); // €1,234.56
 echo Number::fileSize(1234567.89); // 1 KB
 
 // Get a human-readable representation of a number
-echo Number::forHumans(1234567.89); // 1 million
+echo Number::format(1234567.89); // 1 million
+
+// Get the abbreviated form of a number
+echo Number::format(1234567.89); // 1M
 ```
 
 ### Advanced usage
