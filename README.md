@@ -60,6 +60,10 @@ $currencyFormatted = Number::currency(1234.56, 'GBP', 'fr');
 
 ## Information
 
+### Documentation
+
+You can visit the documentation at [friendsofphp.github.io/number](https://friendsofphp.github.io/number/)
+
 ### License
 
 This package is open-sourced software licensed under the [MIT License](LICENSE).
