@@ -19,19 +19,19 @@ use FriendsOfPhp\Number\Number;
 echo Number::format(1234567.89); // 1,234,567.89
 
 // Spell out a number
-echo Number::format(1234567.89); // one thousand two hundred thirty-four
+echo Number::spell(1234567.89); // one thousand two hundred thirty-four
 
 // Get the ordinal form of a number
-echo Number::format(1234567.89); // 42nd
+echo Number::ordinal(1234567.89); // 42nd
 
 // Format a number as a percentage
-echo Number::format(1234567.89); // 1%
+echo Number::percentage(1234567.89); // 1%
 
 // Format a number as currency
-echo Number::format(1234567.89); // €1,234.56
+echo Number::currency(1234567.89, 'EUR'); // €1,234.56
 
 // Format file size
-echo Number::format(1234567.89); // 1 KB
+echo Number::fileSize(1234567.89); // 1 KB
 
 // Get a human-readable representation of a number
 echo Number::format(1234567.89); // 1 million
